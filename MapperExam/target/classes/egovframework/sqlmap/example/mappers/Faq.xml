@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="egovframework.example.faq.service.impl.FaqMapper">
+
+<!-- id="메소드명",parameterType="매개변수자료형",resultType="return자료형"  -->
+<select id="selectFaqList" 
+		parameterType="Criteria" 
+		resultType="FaqVO"
+	>
+		SELECT * FROM TB_FAQ
+		WHERE TITLE LIKE '%' || #{searchKeyword} ||'%'
+		OFFSET #{firstIndex} ROWS
+		FETCH NEXT #{pageUnit} ROWS ONLY
+</select>
+
+  <select id="selectFaqListTotCnt"
+         parameterType="Criteria"
+         resultType="int"
+   >
+	SELECT COUNT(*) FROM TB_FAQ
+	WHERE TITLE LIKE '%' || #{searchKeyword} ||'%'     
+   </select>
+
+</mapper>

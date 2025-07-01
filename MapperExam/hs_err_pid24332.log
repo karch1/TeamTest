@@ -1,0 +1,197 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 534773760 bytes for Failed to commit area from 0x0000000603800000 to 0x0000000623600000 of length 534773760.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3391), pid=24332, tid=35108
+#
+# JRE version:  (11.0.27+6) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.27+6-LTS, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dmaven.home=EMBEDDED -Dclassworlds.conf=C:\Work\07_Mapper\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf5615346862005074882.tmp -Dmaven.multiModuleProjectDirectory=C:\Work\07_Mapper\MapperExam -Dfile.encoding=UTF-8 org.codehaus.plexus.classworlds.launcher.Launcher -B clean
+
+Host: 13th Gen Intel(R) Core(TM) i5-13400, 16 cores, 31G,  Windows 11 , 64 bit Build 26100 (10.0.26100.3912)
+Time: Mon Jun 23 15:09:30 2025  Windows 11 , 64 bit Build 26100 (10.0.26100.3912) elapsed time: 2.019398 seconds (0d 0h 0m 2s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001ff2452a800):  JavaThread "Unknown thread" [_thread_in_vm, id=35108, stack(0x000000f44b400000,0x000000f44b500000)]
+
+Stack: [0x000000f44b400000,0x000000f44b500000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x62e00a]
+V  [jvm.dll+0x7bd169]
+V  [jvm.dll+0x7be858]
+V  [jvm.dll+0x7bef33]
+V  [jvm.dll+0x2539a8]
+V  [jvm.dll+0x62b2ea]
+V  [jvm.dll+0x61f805]
+V  [jvm.dll+0x30f0dc]
+V  [jvm.dll+0x30ef62]
+V  [jvm.dll+0x313c76]
+V  [jvm.dll+0x35b84f]
+V  [jvm.dll+0x35b280]
+V  [jvm.dll+0x2eb828]
+V  [jvm.dll+0x2ec986]
+V  [jvm.dll+0x7970b7]
+V  [jvm.dll+0x798841]
+V  [jvm.dll+0x3686d9]
+V  [jvm.dll+0x779dd0]
+V  [jvm.dll+0x3da29f]
+V  [jvm.dll+0x3dc6b1]
+C  [jli.dll+0x5367]
+C  [ucrtbase.dll+0x37b0]
+C  [KERNEL32.DLL+0x2e8d7]
+C  [ntdll.dll+0x9c5dc]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000001ff22a72aa0, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000001ff24541800 GCTaskThread "GC Thread#0" [stack: 0x000000f44b500000,0x000000f44b600000] [id=10312]
+  0x000001ff245c4800 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000f44b600000,0x000000f44b700000] [id=60012]
+  0x000001ff245c6800 ConcurrentGCThread "G1 Conc#0" [stack: 0x000000f44b700000,0x000000f44b800000] [id=1984]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffbfb8bb6c7]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000001ff22b5b790] Heap_lock - owner thread: 0x000001ff2452a800
+
+Heap address: 0x0000000603800000, size: 8136 MB, Compressed Oops mode: Non-zero based: 0x0000000603800000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (1 events):
+Event: 0.007 Loaded shared library C:\Program Files\Zulu\zulu-11\bin\zip.dll
+
+
+Dynamic libraries:
+0x00007ff77d830000 - 0x00007ff77d83d000 	C:\Program Files\Zulu\zulu-11\bin\javaw.exe
+0x00007ffc9d0c0000 - 0x00007ffc9d326000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffc9c040000 - 0x00007ffc9c109000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffc9a610000 - 0x00007ffc9a9dc000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffc9ad30000 - 0x00007ffc9ae7b000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffc60040000 - 0x00007ffc60059000 	C:\Program Files\Zulu\zulu-11\bin\jli.dll
+0x00007ffc95b00000 - 0x00007ffc95b1e000 	C:\Program Files\Zulu\zulu-11\bin\VCRUNTIME140.dll
+0x00007ffc9bb00000 - 0x00007ffc9bcca000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffc6da10000 - 0x00007ffc6dcaa000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.3912_none_3e07963ce335137e\COMCTL32.dll
+0x00007ffc9a460000 - 0x00007ffc9a487000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffc9c130000 - 0x00007ffc9c1d9000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffc9b400000 - 0x00007ffc9b42b000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffc9a9e0000 - 0x00007ffc9ab12000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffc9ac80000 - 0x00007ffc9ad23000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffc9ba60000 - 0x00007ffc9ba90000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffc95ad0000 - 0x00007ffc95adc000 	C:\Program Files\Zulu\zulu-11\bin\vcruntime140_1.dll
+0x00007ffc8b180000 - 0x00007ffc8b20d000 	C:\Program Files\Zulu\zulu-11\bin\msvcp140.dll
+0x00007ffbfb5c0000 - 0x00007ffbfc15a000 	C:\Program Files\Zulu\zulu-11\bin\server\jvm.dll
+0x00007ffc9b880000 - 0x00007ffc9b932000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffc9bf80000 - 0x00007ffc9c026000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffc9b940000 - 0x00007ffc9ba56000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffc9c270000 - 0x00007ffc9c2e4000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffc9b280000 - 0x00007ffc9b288000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffc890b0000 - 0x00007ffc890bb000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffc93720000 - 0x00007ffc93756000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffc990d0000 - 0x00007ffc990ea000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffc884d0000 - 0x00007ffc884e0000 	C:\Program Files\Zulu\zulu-11\bin\verify.dll
+0x00007ffc70fb0000 - 0x00007ffc711f1000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffc9b430000 - 0x00007ffc9b7b4000 	C:\WINDOWS\System32\combase.dll
+0x00007ffc9c320000 - 0x00007ffc9c400000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ffc6ee90000 - 0x00007ffc6eec9000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffc9abe0000 - 0x00007ffc9ac79000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffc60060000 - 0x00007ffc60088000 	C:\Program Files\Zulu\zulu-11\bin\java.dll
+0x00007ffc884c0000 - 0x00007ffc884ca000 	C:\Program Files\Zulu\zulu-11\bin\jimage.dll
+0x00007ffc60020000 - 0x00007ffc60038000 	C:\Program Files\Zulu\zulu-11\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Zulu\zulu-11\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.3912_none_3e07963ce335137e;C:\Program Files\Zulu\zulu-11\bin\server
+
+VM Arguments:
+jvm_args: -Dmaven.home=EMBEDDED -Dclassworlds.conf=C:\Work\07_Mapper\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf5615346862005074882.tmp -Dmaven.multiModuleProjectDirectory=C:\Work\07_Mapper\MapperExam -Dfile.encoding=UTF-8 
+java_command: org.codehaus.plexus.classworlds.launcher.Launcher -B clean
+java_class_path (initial): C:\Work\opt\eGovFrameDev-4.0.0-64bit\eclipse\plugins\org.eclipse.m2e.maven.runtime_1.16.0.20210129-0849\jars\plexus-classworlds-2.6.0.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 12                                        {product} {ergonomic}
+     uint ConcGCThreads                            = 3                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 13                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 2097152                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 534773760                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 8531214336                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 2097152                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 7594288                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122031976                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122031976                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:/Program Files/Zulu/zulu-11/bin/server;C:/Program Files/Zulu/zulu-11/bin;C:\app\user\product\21c\dbhomeXE\bin;C:\Program Files\Zulu\zulu-11\bin\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Bandizip\;C:\Users\user\AppData\Local\Microsoft\WindowsApps;C:\Users\user\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\user\AppData\Local\GitHubDesktop\bin;C:\Work\opt\eGovFrameDev-4.0.0-64bit\eclipse;
+USERNAME=user
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 183 Stepping 1, GenuineIntel
+TMP=C:\Users\user\AppData\Local\Temp
+TEMP=C:\Users\user\AppData\Local\Temp
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 11 , 64 bit Build 26100 (10.0.26100.3912)
+OS uptime: 14 days 6:18 hours
+
+CPU:total 16 (initial active 16) (8 cores per cpu, 2 threads per core) family 6 model 183 stepping 1 microcode 0x120, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx, sha, fma
+
+Memory: 4k page, system-wide physical 32537M (2676M free)
+TotalPageFile size 92041M (AvailPageFile size 248M)
+current process WorkingSet (physical memory assigned to process): 12M, peak: 12M
+current process commit charge ("private bytes"): 71M, peak: 581M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.27+6-LTS) for windows-amd64 JRE (Zulu11.80+21-CA) (11.0.27+6-LTS), built on Apr  4 2025 15:46:06 by "zulu_re" with MS VC++ 15.9 (VS2017)
+
+END.
