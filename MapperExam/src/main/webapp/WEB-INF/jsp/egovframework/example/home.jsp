@@ -21,7 +21,7 @@
 
 <!-- 메인 -->
 <div class="page mt5">
-   Hello world!  
+   안녕  
 </div>
 <!-- 꼬리말 -->
 <!-- jquery -->
